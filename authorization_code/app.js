@@ -104,13 +104,13 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('/#' +
+        res.redirect('http://64.225.119.112:3050/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
           }));
       } else {
-        res.redirect('/#' +
+        res.redirect('http://64.225.119.112:3050/#' +
           querystring.stringify({
             error: 'invalid_token'
           }));
